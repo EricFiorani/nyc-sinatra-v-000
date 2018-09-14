@@ -19,5 +19,10 @@
   <input type="text" name="title[name]" id="new_title" />
   <br />
 
-  <h2><label>Landmark</label></h2>
+  <h2><label>Landmarks</label></h2>
+  <%Landmark.all.each do |landmark|%>
+    <label><%= landmark.name %></label>
+    <input type="checkbox" name="figure[landmark_id][]" value="<%=landmark.id" id="<%landmark_<%landmark.id%>">
+    <br />
+  <%end%>
 </form>
